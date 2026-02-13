@@ -81,6 +81,7 @@ export default function App(){
                       <DropdownMenuRadioGroup value={buttonText} onValueChange={setButtonText} className='w-full'>
                         {categories.map((category) =>(
                           <DropdownMenuRadioItem 
+                            key={category}
                             value={category}
                             onClick={() => handleCategoryClick(category)}
                           >
@@ -116,7 +117,7 @@ export default function App(){
               <div className=''>
                 {notes.map((note) => (
                   <NoteCard
-                  key={Date.now()}
+                  key={note.title} 
                   title={note.title}
                   content={note.content}
                   category={note.category}
