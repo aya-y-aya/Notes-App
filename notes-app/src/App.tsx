@@ -78,6 +78,7 @@ export default function App(){
                 <DropdownMenuContent className='w-full'>
                   <DropdownMenuGroup>
                     {!isOpen && (
+                      // TO DO: Filter notes based on chosen category
                       <DropdownMenuRadioGroup value={buttonText} onValueChange={setButtonText} className='w-full'>
                         {categories.map((category) =>(
                           <DropdownMenuRadioItem 
